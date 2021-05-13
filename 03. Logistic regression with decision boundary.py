@@ -7,9 +7,6 @@ iris = datasets.load_iris()
 X = iris["data"][:, 3:]
 y = (iris["target"] == 2).astype(np.int)
 
-plt.hist(X[y==0, :], color = "green")
-plt.hist(X[y==1, :], color = "red")
-
 log_reg = LogisticRegression(random_state=42)
 clf = log_reg.fit(X, y)
 X_new = np.linspace(0, 3, 1000).reshape(-1, 1)
