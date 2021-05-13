@@ -11,6 +11,8 @@ y = iris["target"]
 plt.hist(X[y==0, :], color = "darkred")
 plt.hist(X[y==1, :], color = "firebrick")
 plt.hist(X[y==2, :], color = "lightcoral")
+plt.legend()
+plt.title('Histogram of sepal width in three iris species')
 plt.show()
 
 log_reg = LogisticRegression(random_state=42)
@@ -26,6 +28,7 @@ plt.plot(X_new, y_proba_new[:, 0], "g-", linewidth=2, label="Setosa")
 plt.plot(X_new, y_proba_new[:, 1], "r-", linewidth=2, label="Versicolor")
 plt.plot(X_new, y_proba_new[:, 2], "y-", linewidth=2, label="Virginica")
 plt.legend()
+plt.title('Probability distribution for generated points')
 plt.show()
 
 plt.plot(X, y_proba[:, 0], "g-", linewidth=2, label="Setosa")
